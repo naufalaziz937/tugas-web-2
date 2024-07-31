@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Boy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+</head>
+
+<body>
+
+    <audio id="myAudio" src="sigma.mp3" preload="auto"></audio>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    Sigma <span>Boy</span>
+                </a>
+                <div class="navigation" id="navigation">
+                    <a href="#" class="link">Home</a>
+                    <a href="#" class="link">About</a>
+                    <a href="#" class="link">Portofolio</a>
+                    <a href="#" class="link">Contact</a>
+                    <div class="mobile close">
+                        <button class="btn" id="close"><i class="ri-close-line"></i></button>
+                    </div>
+                </div>
+                <div class="nav-btns" id="controls">
+                    <button class="btn active">Here me</button>
+                    <button class="btn">My address</button>
+                </div>
+                <div class="mobile ">
+                    <span class="btn" id="open"><i class="ri-menu-3-line"></i></span>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="content container">
+            <div class="items">
+                <div class="item">
+                    <h1 class="title">
+                        Hi, <span> I'm </span>
+                        Nazwan Naufal Aziz
+                    </h1>
+                    <div class="desc">
+                        <p>
+                            Siswa <span>SMKN 1 CISARUA</span> Kelas XI RPL 1
+                        </p>
+                        <p style="color: red;">
+                            Saya lahir pada tanggal 8 Juli 2008 sekarang saya berumur 16th</br>
+                            Alamat : Kp.Barunyatuh Ds.Pasirlangu</br>
+                        </p>
+                        <p>"Hiduplah Sesigma mungkin jika hidup tak mau skibidi"</br>
+                            SKIBIDI SIGMA MEWING OHIO GYAT RIZZ LEVEL 690 +5000 AURA</p>
+                    </div>
+                    <div class="btns">
+                        <a href="film.html" class="btn active" target="_blank">
+                            Tugas
+                        </a>
+                        <button onclick="playMusic()" class="btn">
+                            <i class="ri-play-fill"></i>
+                            <span>Play music</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="kecil.png" alt="" srcset="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const open = document.getElementById('open');
+        const close = document.getElementById('close');
+        let navigation = document.getElementById('navigation');
+        let controls = document.getElementById('controls');
+
+
+
+        open.addEventListener("click", () => {
+            navigation.classList.add('active')
+            controls.classList.add('active')
+
+        });
+
+        close.addEventListener('click', () => {
+            navigation.classList.remove('active')
+            controls.classList.remove('active')
+
+        });
+
+        function playMusic() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        function tugas() {
+            document.querySelector('.btns').addEventListener('click', () => {
+
+                window.location.href = 'index2.html';
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>
